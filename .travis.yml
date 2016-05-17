@@ -12,11 +12,13 @@ deploy:
   secret_access_key:
     secure: YCFG1JTU8YXucJbRAxjlO3//5GANL6tk0kMKFrvh0GDke0mv5fbJsH4+yWzhk49fGVwRfzUg5kI647B6a7J4yNipLQrjV/RaWrI50bB4rlmSMz4Ft93LSO1NfIT3xkX+aQ/gn+5Zzk0gMJoehupyFYlnR8Ofk2GVmYQGeRUSUR0ceST1wGoDbKOr3Xm+Zo/6nhvXF6ztVFZ+97uFFZP6DDN+fFY6d5b2CmNlCy/O5BEYND56FDPltAf7kY+l9WoFR2gkFBKxKuhWyReLMDJgPVImfzU5/eB76Om92klzWdS/6JgEmqZGRlF2Tg6adrQ3OkJNz5gpfMYf7RX9POlzLn/0oRKK0rd399kIJEGWUNRP8g9KGI7rFBivDjp+b7kn4544FH0dOxneOKLPZ65Bi+CTHh7HlnhU5oH34Bc/yIbigWgGJnYlmhHjQAOlM5ai+N4w7pXd/4XvuVGhi8NzkWjKP42TbpNaojpJAR95BnvbzwKcZxStVqxr72hCXuHOOLB+laXe3XtG3QErMAWQMTYSkyfKkH87/OFv5xfEItI7xsOauOrPR/N7cV2etOk9IX9y0mffqw5XjneRq+IgyKpd1gFWnAet7xOisahSCpW/NnDYcViotHZuts4UYS++cQM5eCfEoDUNqVzFQQlIXecnzeV3V05oycqHlVeW4NQ=
   bucket: vladgritsevich.com
+  skip_cleanup: true
+  region: us-east-1
   local-dir: dist
   acl: public_read
   on:
     repo: vitkon/vladgritsevich.com
-after_success: 
+after_success:
 branches:
   only:
   - master
