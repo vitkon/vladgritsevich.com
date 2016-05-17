@@ -1,0 +1,29 @@
+.comment {
+    margin-bottom: 24px;
+    padding: 10px;
+    border-radius: 8px;
+    text-shadow: 0 1px 0 #ffffff;
+    background: linear-gradient(#fafafa, #efefef);
+
+    &__name {
+        font-weight: bold;
+        font-style: italic;
+        text-shadow: 0 1px 0 #ffffff;
+        margin-bottom: 20px;
+
+        &:after {
+            content: ' says';
+            font-weight: normal;
+        }
+    }
+
+    &__timestamp {
+        display: none;
+    }
+
+    &__text {
+        font-size: 0.75rem;
+    }
+
+
+}

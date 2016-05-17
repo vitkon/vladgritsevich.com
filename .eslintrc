@@ -1,0 +1,28 @@
+{
+    "presets": [ "es2015" ],
+    "extends": "airbnb",
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "modules": true
+        }
+    },
+
+    "rules": {
+        "max-len": [2, 120, 2],
+        "comma-dangle": [2, "never"],
+        "indent": [2, 4],
+        "react/jsx-indent-props": [2, 4],
+        "consistent-return": 0
+    },
+
+    "ecmaFeatures": {
+        "jsx": true,
+        "experimentalObjectRestSpread": true
+    }
+}

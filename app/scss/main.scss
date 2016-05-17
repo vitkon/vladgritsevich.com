@@ -1,0 +1,36 @@
+@import "../css/normalize.css";
+@import "../css/foundation.min.css";
+@import "../css/twentytwenty.css";
+
+@import "./_media-queries-mixin.scss";
+@import "./_header.scss";
+@import "./_main-nav.scss";
+@import "./_portfolio.scss";
+@import "./_comments.scss";
+@import "./_footer.scss";
+
+body {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.5rem;
+    font-family: "Trebuchet MS", Arial, sans-serif
+}
+
+header {
+  margin-top: 10px;
+}
+
+h1 {
+  font-family: "PT Serif", serif;
+  font-size: 1.5rem;
+  color: #761819;
+  margin-bottom: 24px;
+}
+
+header, .main-content, footer > div:first-child {
+  margin-bottom: 20px;
+}
+
+.u-100pc-width {
+    width: 100%;
+}

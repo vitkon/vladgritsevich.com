@@ -1,0 +1,68 @@
+.logo {
+    background: url('../img/vg-logo.jpg') no-repeat;
+    background-position: center;
+    display: inline-block;
+    flex-shrink: 0;
+    height: 113px;
+    overflow: hidden;
+    text-indent: -9999px;
+    min-width: 330px;
+
+    @include tablet {
+        background-position: top center;
+    }
+}
+
+@mixin contact-icon {
+    content: '';
+    position: absolute;
+    left: 0;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.header-container {
+    display: flex;
+    flex-shrink: 0;
+    flex-flow: column wrap;
+    align-items: center;
+
+    @include desktop {
+        align-items: flex-end;
+    }
+
+    &__nav {
+        width: 100%;
+    }
+
+    &__tel, &__email {
+        display: block;
+        text-align: left;
+        padding-left: 40px;
+        position: relative;
+        line-height: 30px;
+        font-size: 20px;
+        width: 240px;
+
+        @include desktop {
+            text-align: right;
+        }
+    }
+
+    &__email {
+        margin-bottom: 20px;
+
+        &:before {
+            background: url('../img/envelope.png') no-repeat;
+            @include contact-icon();
+        }
+    }
+
+    &__tel {
+        &:before {
+            background: url('../img/telephone.png') no-repeat;
+            @include contact-icon();
+        }
+    }
+}

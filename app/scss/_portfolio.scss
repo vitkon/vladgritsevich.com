@@ -1,0 +1,49 @@
+.portfolio {
+    width: 100%;
+    height: calc(90vw * 0.56);
+    position: relative;
+    z-index: 500;
+    margin-bottom: 40px;
+    border: 10px solid #efefef;
+    border-radius: 8px;
+    background-size: cover;
+
+
+    @include tablet {
+    	width: 580px;
+    	height: 435px;
+    }
+
+    transition: background-image 1.5s ease;
+
+    &:hover {
+        transition: background-image 1.5s ease;
+
+        .caption {
+            &:before {
+                content: 'Before';
+                transition: all 1.5s;
+            }
+        }
+    }
+
+    .caption {
+        width: 80px;
+        padding: 10px;
+        font-size: 18px;
+        background: rgba(255, 255, 255, 0.75);
+        font-weight: bold;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        margin: 0 10px 10px 0;
+        text-align: center;
+        border-radius: 8px;
+
+        &:before{
+            content: 'After';
+            transition: all 1.5s;
+        }
+    }
+}

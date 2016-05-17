@@ -1,0 +1,53 @@
+.main-nav {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    list-style: none;
+
+    @include tablet {
+        flex-flow: row wrap; justify-content: space-between;
+    }
+
+    @include desktop {
+        justify-content: flex-end;
+    }
+
+    &__item {
+        min-width: 120px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+
+        @include desktop {
+            margin-left: 20px;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        width: 100%;
+        height: 35px;
+        color: #761819;
+        font-family: "PT Serif", serif;
+        background: #fee6ce;
+
+        @include tablet {
+            border-radius: 10px;
+        }
+
+        &:hover {
+            color: #fff;
+            background: #761819;
+        }
+
+        &.active {
+                background: #efefef;
+                cursor: default;
+                color: #333;
+
+                &:hover {
+                    color: #333;
+                }
+        }
+    }
+}
