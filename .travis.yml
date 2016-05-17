@@ -1,18 +1,22 @@
 sudo: false
-
 language: node_js
 node_js:
-  - 5
-
+- 5
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 script: npm run build
-
+deploy:
+  provider: s3
+  local-dir: dist
+  access_key_id: AKIAI67GUITCUFLXBOAQ
+  secret_access_key:
+    secure: imkwzNH9Y1Vl27uMJWuMeaaSX6OT+yCroOufX+QSv2FoQnUp6ZTV38y6sjbKEezKcwj2SiZa1CSuBdRCT5u9tZoj1iz15x0/SgrN3VEZngngDSG9npgeZlvp4yITEzDvQ29nmCgqyV+n2qiCOcvUqlAnyGrTYxSBcVAYyHIrfGgq1g+59b/MjkSeDDjioDaF7IoLBl/CB6TnymCRn+S1nZxaldbdaFW8nLFf3B+GVos5WxNqdtzBo7sftsgPjzF6jrmKco70Vgl8m0s4kpS1Jk8GgpmlSPxGC/B3kl+lxzz+HSAl4SdbaU6GhpxkjNqonZ7qLju8i/rlqmzbKJSoxEfWWXsfKd0OWIMuey+vmQUJCxoN9i+LA3DbPJ1u0LaejjtBSe0t5ycr9h6ePTD0hiEUVZIxMeLGC0k4Sc9HVmVNK/f8J6f+LmnOtT8ns2WCLsm73dZeXh2gHR212x5Eb/3x4+qpGOmCHXey05xmMPOSjGWmfew1d6FMWn7D/Vg/1HYdxAahQZNoYxX4utiNYi3+MjLoihZ2XxBCBsbu0RU0HfbCqZy6y/4+PpWdbY3vYaRqnJNckpqAYDM08Yn3HmYwhtaaGiRfFpS5esunOsfguBxVkhYwCdxQ2zMzLwHw18eHpTlO0S7o9zQ7MfEc7ljIQROJa76QYNE7AgXiBLU=
+  bucket: "vladgritsevich.com"
+  skip_cleanup: true
+  region: "us-east-1"
 after_success:
-
 branches:
   only:
-    - master
-    - develop
+  - master
+  - develop
