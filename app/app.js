@@ -14,6 +14,7 @@ if (window.location.pathname === '/portfolio.html') {
                 .ba${i} { background: url("portfolio-assets/ba-${i}-2.jpg") }
                 .ba${i}:hover { background: url("portfolio-assets/ba-${i}-1.jpg") }
             </style>
+            <img src="portfolio-assets/ba-${i}-1.jpg" alt="" style="display: none" />
         `);
     }
 
