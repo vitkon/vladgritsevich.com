@@ -29,7 +29,7 @@
         height: 35px;
         color: #761819;
         font-family: "PT Serif", serif;
-        background: #fee6ce;
+        background: #fee6ce url('../img/skin-side-up.png');
 
         @include tablet {
             border-radius: 10px;

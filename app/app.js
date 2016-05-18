@@ -1,6 +1,29 @@
 const portfolio = [];
 const amount = 18;
 let i;
+import NinjaSlider from './js/ninja.slider.js';
+
+if (window.location.pathname === '/') {
+    const nsOptions = {
+        sliderId: 'ninja-slider',
+        transitionType: 'kenburns 1.2', // "fade", "slide", "zoom", "kenburns 1.2" or "none"
+        autoAdvance: true,
+        delay: 'default',
+        transitionSpeed: 'default',
+        aspectRatio: '9:3.5',
+        initSliderByCallingInitFunc: false,
+        shuffle: true,
+        startSlideIndex: 0, // 0-based
+        navigateByTap: true,
+        pauseOnHover: false,
+        keyboardNav: true,
+        before: null,
+        license: 'mylicense'
+    };
+
+    // eslint-disable-next-line
+    const nslider = new NinjaSlider(nsOptions);
+}
 
 if (window.location.pathname === '/portfolio.html') {
     for (i = amount; i > 0; i--) {

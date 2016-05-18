@@ -1,6 +1,6 @@
 @import "../css/normalize.css";
 @import "../css/foundation.min.css";
-@import "../css/twentytwenty.css";
+@import "../css/ninja-slider.css";
 
 @import "./_media-queries-mixin.scss";
 @import "./_header.scss";
@@ -12,7 +12,7 @@
 body {
     font-size: 0.875rem;
     color: #666;
-    background: #fee6ce;
+    background: #fee6ce url('../img/texturetastic-gray.png');
     line-height: 1.5rem;
     font-family: "Trebuchet MS", Arial, sans-serif;
 }
@@ -30,10 +30,6 @@ h1 {
 
 header, .main-content, footer > div:first-child {
     padding-bottom: 20px;
-}
-
-.main-content {
-    min-height: 60vh;
 }
 
 .row {
