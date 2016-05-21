@@ -1,28 +1,35 @@
 const portfolio = [];
 const amount = 18;
 let i;
-import NinjaSlider from './js/ninja.slider.js';
 
 if (window.location.pathname === '/') {
-    const nsOptions = {
-        sliderId: 'slider',
-        transitionType: 'kenburns 1.2', // "fade", "slide", "zoom", "kenburns 1.2" or "none"
-        autoAdvance: true,
-        delay: 'default',
-        transitionSpeed: 'default',
-        aspectRatio: '9:3.5',
-        initSliderByCallingInitFunc: false,
-        shuffle: true,
-        startSlideIndex: 0, // 0-based
-        navigateByTap: true,
-        pauseOnHover: false,
-        keyboardNav: true,
-        before: null,
-        license: 'mylicense'
+    const images = document.getElementsByClassName('slider__image');
+    const startImage = 0;
+
+    images[0].className += ' fx';
+
+    const makeImage = function* maker() {
+        let currentImage = startImage;
+        while (true) {
+            currentImage = (currentImage === images.length) ? 0 : currentImage;
+            yield currentImage;
+            currentImage += 1;
+        }
     };
 
-    // eslint-disable-next-line
-    const nslider = new NinjaSlider(nsOptions);
+    const imageGenerator = makeImage();
+
+    const slideShow = function kenBurns() {
+        const index = imageGenerator.next().value;
+        const numberOfImages = images.length;
+        images[index].className += ' fx';
+
+        if (index === 0) { images[numberOfImages - 2].className = 'slider__image'; }
+        if (index === 1) { images[numberOfImages - 1].className = 'slider__image'; }
+        if (index > 1) { images[index - 2].className = 'slider__image'; }
+    };
+
+    window.setInterval(slideShow, 6000);
 }
 
 if (window.location.pathname === '/portfolio.html') {
