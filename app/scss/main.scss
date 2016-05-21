@@ -32,6 +32,10 @@ header, .main-content, footer > div:first-child {
     padding-bottom: 20px;
 }
 
+.main-content {
+    min-height: calc(100vh - 275px);
+}
+
 .row {
     background: #fff;
 }

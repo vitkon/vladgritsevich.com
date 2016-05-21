@@ -5,7 +5,7 @@ import NinjaSlider from './js/ninja.slider.js';
 
 if (window.location.pathname === '/') {
     const nsOptions = {
-        sliderId: 'ninja-slider',
+        sliderId: 'slider',
         transitionType: 'kenburns 1.2', // "fade", "slide", "zoom", "kenburns 1.2" or "none"
         autoAdvance: true,
         delay: 'default',
