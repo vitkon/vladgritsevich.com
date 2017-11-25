@@ -1,5 +1,5 @@
 const portfolio = [];
-const amount = 20;
+const amount = 21;
 let i;
 
 if (window.location.pathname === '/') {
